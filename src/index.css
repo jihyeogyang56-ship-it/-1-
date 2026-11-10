@@ -1,0 +1,178 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Pretendard', 'Noto Sans KR', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+@layer base {
+  :root {
+    --bg-canvas: #f1f5f9;
+    --bg-surface: #ffffff;
+    --bg-surface-subtle: #f8fafc;
+    --border-color: #e2e8f0;
+    --text-primary: #0f172a;
+    --text-secondary: #64748b;
+    --text-muted: #94a3b8;
+  }
+
+  /* Overall Canvas Backdrop: Pure Pitch Black #000000 */
+  body,
+  body.theme-navy,
+  body.theme-emerald,
+  body.theme-light {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+  }
+
+  header {
+    background-color: #12131a !important;
+    border-color: transparent !important;
+    color: #ffffff !important;
+  }
+
+  aside {
+    background-color: #0f1015 !important;
+    border-color: transparent !important;
+  }
+
+  /* Card Surfaces: Distinctly brighter than the pitch black #000000 background, NO white borders */
+  .bg-white,
+  .bg-black {
+    background-color: #151821 !important;
+    color: #ffffff !important;
+    border-color: transparent !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  }
+
+  /* Secondary nested tiles, table headers, inner stat boxes */
+  .bg-slate-50,
+  .bg-slate-50\/40,
+  .bg-slate-50\/50,
+  .bg-slate-50\/70,
+  .bg-slate-100,
+  .bg-slate-100\/60,
+  .bg-slate-100\/70,
+  .bg-slate-100\/80,
+  .bg-neutral-900,
+  .bg-neutral-800 {
+    background-color: #202330 !important;
+    color: #f1f5f9 !important;
+    border-color: transparent !important;
+  }
+
+  /* Completely remove all white and generic border lines from windows and panels */
+  .border-white,
+  .border-white\/10,
+  .border-white\/20,
+  .border-white\/30,
+  .border-white\/40,
+  .border-white\/50,
+  .border-white\/60,
+  .border-slate-100,
+  .border-slate-200,
+  .border-slate-300,
+  .border-slate-400 {
+    border-color: transparent !important;
+  }
+
+  .ring-white\/20,
+  .ring-white\/30,
+  .ring-white\/40,
+  .ring-white\/50,
+  .ring-white\/60 {
+    --tw-ring-color: transparent !important;
+  }
+
+  .text-slate-900 {
+    color: #ffffff !important;
+  }
+
+  .text-slate-800 {
+    color: #ffffff !important;
+  }
+
+  .text-slate-700 {
+    color: #e5e7eb !important;
+  }
+
+  .text-slate-600 {
+    color: #d1d5db !important;
+  }
+
+  .text-slate-500 {
+    color: #9ca3af !important;
+  }
+
+  .text-slate-400 {
+    color: #9ca3af !important;
+  }
+
+  input,
+  select,
+  textarea {
+    background-color: #161822 !important;
+    border-color: #2b2f3d !important;
+    color: #ffffff !important;
+  }
+
+  /* Subtle dark divider for table rows without harsh white lines */
+  .divide-slate-200 > :not([hidden]) ~ :not([hidden]),
+  .divide-slate-100 > :not([hidden]) ~ :not([hidden]) {
+    border-color: #232736 !important;
+  }
+
+  .hover\:bg-slate-50:hover,
+  .hover\:bg-slate-50\/80:hover,
+  .hover\:bg-slate-100:hover {
+    background-color: #141414 !important;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    letter-spacing: -0.012em;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+  
+  .font-mono, [data-mono="true"] {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .text-2xs {
+    font-size: 0.6875rem; /* 11px */
+    line-height: 0.95rem;
+  }
+
+  /* Pure solid black backdrop with NO crosshairs or patterns */
+  .medical-grid-bg {
+    background-color: #000000 !important;
+    background-image: none !important;
+  }
+}
+
+@media print {
+  aside, header, nav, .no-print, button, input, select {
+    display: none !important;
+  }
+  
+  body, main {
+    background: white !important;
+    color: black !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .print-page {
+    page-break-after: always;
+  }
+}
+
+.print-only {
+  display: none;
+}

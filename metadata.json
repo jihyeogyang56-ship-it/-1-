@@ -1,0 +1,8 @@
+{
+  "name": "Remix 병원 진단용 방사선 안전관리 및 후속조치 시스템",
+  "description": "진단용 방사선 안전관리 점검 미완료 항목 추적, 조치 승인 워크플로우, ALARA 피폭선량 모니터링, 장비 정도관리(QA/QC), RI 동위원소 라이프사이클 통합 관리 시스템",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
